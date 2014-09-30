@@ -1,0 +1,6 @@
+.DS_Store
+.vagrant
+/chef/vendor/remote
+/node_modules
+/components
+/vagrant.json
