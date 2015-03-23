@@ -1,0 +1,111 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/Article">
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="" prefix="og: http://ogp.me/ns#" itemscope itemtype="http://schema.org/Article"><!--<![endif]-->
+<head>
+	<!-- título -->
+	<title>Mundo Verde</title>
+	<!-- css -->				
+	<link href="jlocator.min.css" rel="stylesheet" type="text/css" />
+	
+	<script src="jquery-1.10.1.min.js"></script>
+	<!-- jlocator is based on jplist plugin: http://jplist.no81no.com -->
+	<script src="jplist.min.js"></script>	
+	
+	<!-- jlocator -->		
+	<script src="http://maps.google.com/maps/api/js?sensor=false&libraries=places,geometry"></script>
+	<script src="jlocator.min.js"></script>
+<script type='text/javascript'>	
+   $('document').ready(function(){				
+      $('#jlocator').jlocator();
+   });
+</script>
+</head>
+<body>
+	
+					<!-- STORE LOCATOR DEMO -->
+					<div id="jlocator">
+					
+						<!-- panel -->
+						<div class="panel" data-type="panel">
+						
+							<!-- controls -->
+							<div class="controls" data-type="controls">
+
+								<div class="box">
+
+                                    <div class="reset-box left">
+                                       <input
+                                          type="button"
+                                          class="jplist-btn"
+                                          value="Reset"
+                                          data-control-type="reset"
+                                          data-control-name="reset"
+                                          data-control-action="reset"
+                                       />
+                                    </div>
+									
+									<input 
+										class="autocomplete left"
+										data-control-type="autocomplete" 
+										data-control-name="autocomplete" 
+										data-control-action="filter"
+										data-radius="100000" 
+										type="text"
+										placeholder="Enter a location"
+									/><!-- data-radius in meters -->
+								</div>
+								
+								<div class="box">
+								
+									<!-- paging -->
+									<div 
+										class="paging-results left" 
+										data-type="Page {current} of {pages}" 
+										data-control-type="label" 
+										data-control-name="paging" 
+										data-control-action="paging"></div>
+										
+									<div 
+										class="paging left" 
+										data-control-type="placeholder" 
+										data-control-name="paging" 
+										data-control-action="paging"
+										data-items-per-page="5"></div>
+									</div>
+							</div>
+							
+							<!-- store list -->
+							<div class="stores box" data-type="stores">
+								
+								<!-- store -->
+								<div 
+									data-type="store" 
+									class="store box"
+									data-latitude="39.8252813" 
+									data-longitude="-86.1857915">
+									<p class="art">
+										<span class="title" data-type="title">Indianapolis Museum of Art</span>,<br>
+										<span data-type="address">4000 Michigan Road</span>,<br>
+										<span data-type="city">Indianapolis</span>,<br>
+										<span data-type="state">Indiana</span>,<br>
+										<!--span data-type="zipcode"></span><br/-->
+										<span data-type="country">United States</span><br/>
+										<span class="tags">Tags: Art</span>
+									</p>
+								</div>
+							</div>
+							
+							<!-- no results -->
+							<div class="box no-results" data-type="no-results">
+								<p>No results found</p>
+							</div>
+						<div class="map" data-type="map"></div>
+							
+						</div>
+					</div>
+					<!-- end of STORE LOCATOR DEMO -->
+</body>
+</html>

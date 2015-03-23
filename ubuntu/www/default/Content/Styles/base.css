@@ -1,0 +1,809 @@
+﻿html, body
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 12px;
+    overflow: hidden;
+    min-height: 500px;
+    font-family: 'Verdana';
+}
+.branch-panel{background:#fff;float:left;width:37%;left:0;top:0}
+
+*:hover, *:active, *:focus, input:focus, textarea:focus {
+outline:none !important;
+}
+
+.branch-panel-wrapper #side_bar ul{
+  padding:0;
+  margin:0;
+  list-style:none
+}
+
+.sep
+{
+    -webkit-box-shadow: 0px 12px 20px 2px rgba(117, 117, 117, 0.16), inset 0px -1px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: 0px 12px 20px 2px rgba(117, 117, 117, 0.16), inset 0px -1px rgba(0, 0, 0, 0.13);
+    box-shadow: 0px 12px 20px 2px rgba(117, 117, 117, 0.16), inset 0px -1px rgba(0, 0, 0, 0.13);
+    margin: 16px 0;
+}
+#wrapper
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#wrapper .page
+{
+    top: 56px;
+    bottom: 0;
+    right: 0;
+    left: 275px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+    position: absolute;
+}
+
+#wrapper .page2
+{
+    top: 56px;
+    bottom: 0;
+    right: 0;
+    left: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+    position: absolute;
+}
+
+#map-canvas
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-transition: bottom .5s;
+    -webkit-transition-timing-function: ease-in;
+}
+
+#lat2:hover > #latSeta{
+    -webkit-transition: opacity 0.1s;
+    -webkit-transition-delay: 0.2s;
+    opacity: 0;
+} 
+
+.main-content ul ul, ul.normal ul, ul.check ul, ul.arrow ul, ul.normal_red ul, ul.check_red ul, ul.arrow_red ul, ul.circle ul, 
+ul.circle_red ul, ul.normal_white ul, ul.check_white ul, ul.arrow_white ul, ul.circle_white ul {
+margin-left: 0px;
+margin-top:4px;
+padding-left:0;
+}
+
+ .jsp_map_block {background: none repeat scroll 0 0 #ffffff;clear: both;display: block;padding: 27px 5px 20px;position:relative;}
+ .jsp_map_block .jsp_wrap {border:1px solid #b2c2e6;padding:10px 10px;font-size:12px;}
+ .jsp_map_block .jsp_wrap input, .jsp_map_block .jsp_wrap textarea, .jsp_map_block .jsp_wrap select { font-family:Arial, Helvetica, sans-serif; font-size:12px;background:#fff; }
+ .jsp_map_block .jsp_wrap .Jlocatorlogo {height: 30px;left:0;top: -10px;color:#3a3a3a;line-height: normal;position: absolute;text-align: left;width:100%;}  
+ .jsp_map_block .jsp_wrap .Jlocatorlogo > span {background: none repeat scroll 0 0 #FFFFFF;display:inline-block;  padding:0 20px;  font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;font-weight: normal;}
+
+
+#lat2:hover{
+    width: 275px;
+    -webkit-transition-delay: 0.2s;
+}
+
+.main-content ul li:hover, .blog_more ul li:hover, .normal li:hover, .check li:hover, .arrow li:hover, .normal_red li:hover, .check_red li:hover, .arrow_red li:hover, .circle li:hover,
+.circle_red li:hover, .normal_white li:hover, .check_white li:hover, .arrow_white li:hover, .circle_white li:hover, ol li:hover  {
+color: #666;
+cursor:default;
+}
+
+.main-content ul li, .blog_more ul li, .normal li, .check li, .arrow li, .normal_red li, .check_red li, .arrow_red li, .circle li,
+.circle_red li, .normal_white li, .check_white li, .arrow_white li, .circle_white li  {
+background: transparent url(../Images/list_bullet.png) 0 3px no-repeat;
+padding-left: 21px;
+list-style:none;
+margin:5px 0;
+}
+
+.branch-panel-wrapper{
+  height:90%!important;
+  overflow:auto;
+  border-bottom: 1px dotted #CCCCCC;
+}
+
+ .branch-panel-wrapper #side_bar ul{padding:0;margin:0;list-style:none}
+
+  .branch-panel{
+    background:#fff;
+    float:left;
+    width:37%;
+    left:0;
+    width: 100%;
+    text-align: left;
+    top:0
+  }
+  .jsp_map_block .jsp_wrap {border:1px solid #b2c2e6;padding:10px 10px;font-size:12px;}
+  .jsp_map_block .jsp_wrap input, .jsp_map_block .jsp_wrap textarea, .jsp_map_block .jsp_wrap select { font-family:Arial, Helvetica, sans-serif; font-size:12px;background:#fff; }
+  .jsp_map_block .jsp_wrap .Jlocatorlogo {height: 30px;left:0;top: -10px;color:#3a3a3a;line-height: normal;position: absolute;text-align: left;width:100%;}  
+  .jsp_map_block .jsp_wrap .Jlocatorlogo > span {background: none repeat scroll 0 0 #FFFFFF;display:inline-block;  padding:0 20px;  font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;font-weight: normal;}
+
+   body, div, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote {
+    margin: 0;
+    padding : 0;
+   }
+
+   .branch-panel-wrapper{
+     height:380px;
+     overflow:auto;
+     border-bottom: 1px dotted #CCCCCC;
+   }
+   .branch-panel-wrapper #side_bar ul{padding:0;margin:0;list-style:none}
+  
+.branch-panel>.jsp_title{
+  line-height:35px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px !important;
+  font-weight:bold;
+  background:#263f8d;;color:#fff !important;padding:0 10px !important;margin:0 !important}
+
+  .jsp_wrap_body{border:1px dotted #ccc;position:relative;}
+
+
+h1, h2{
+  background:#263F8D url(../Images/bg_title.png) right center no-repeat !important;
+  color:#FFF !important;
+  font-size:20px !important;
+  padding:10px 15px !important;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#lat
+{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    width: 25px;
+    background: #fff;
+    text-align: center;
+    z-index: 3;
+    width: 275px;
+    box-shadow: 3px 0px 5px 1px rgba(0, 0, 0, .33);
+    -webkit-box-shadow: 3px 0px 5px 1px rgba(0, 0, 0, .33);
+    transition: width 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: width 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition-delay: 0.5s;
+    overflow: hidden;
+}
+
+#latSeta
+{
+    height: 100%;
+    width: 25px;
+    background: url('../Images/open.png') center 47% #0083B5 no-repeat;
+    float: left;
+    display: block;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s;
+    -webkit-transition-delay: 0.6s;
+    position: fixed;
+    z-index: 10;
+}
+
+#topo
+{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    height: 56px;
+    margin-top: 0;
+    z-index: 4;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+    text-align: center;
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, .33);
+    -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, .33);
+}
+
+#logo
+{
+    float: left;
+    margin: 0px 0px 0px 10px;
+    padding: 2px 4px;
+}
+
+#logo img
+{
+    vertical-align: middle;
+    outline: 0;
+    height: 139px;
+    margin-top: -46px;
+}
+
+.logo-marcadagua
+{
+    position: absolute;
+    bottom: 25px;
+    right: 140px;
+    width: 120px;
+    height: 20px;
+    background: url('../Images/wm-geo-oficial.png') no-repeat center;
+    z-index: 998;
+    cursor: pointer;
+}
+.menu:last-child
+{
+    float: right !important;
+}
+
+.menu:last-child > ul
+{
+    padding: 0px;
+}
+
+.menu:last-child > ul > li > a:after
+{
+    content: "";
+    width: 0;
+    height: 0;
+    position: relative;
+    top: 10px;
+    right: -16px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: #FFF transparent;
+}
+
+.menu:last-child > ul > li > a:hover:after
+{
+    border-color: #00ADD8 transparent;
+}
+
+.menu
+{
+    float: left;
+    height: 56px;
+}
+
+.menu > ul
+{
+    list-style: none;
+    height: 56px;
+    margin: 0px;
+}
+
+.menu > ul > li
+{
+    float: left;
+    margin: 0px 20px;
+}
+
+.menu > ul > li > a, .dropdown > li > a
+{
+    color: #FFF;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    margin-top: 20px;
+    display: block;
+}
+
+.menu > ul > li > a:hover
+{
+    color: #00ADD8;
+}
+
+.menu:last-child > ul > li > a
+{
+    margin: 0px 20px;
+    font-size: 12px;
+}
+
+.menu:last-child > ul > li
+{
+    min-width: 153px;
+}
+
+#topo > #container
+{
+    min-width: 1080px;
+    height: 56px;
+}
+.branch-list>li{border-top:1px dotted #ccc;color:#0e112a;background:none;padding-left:0;}
+.branch-list>li:after{display:block;clear:both;content:" "}
+.branch-list>li .branch-list-header{padding:12px 0 25px 0}
+.branch-list>li .branch-list-header a{color:#0e112a !important;text-decoration:none !important}
+.branch-list>li .branch-list-header a:hover{color:#0e112a !important}
+.branch-list>li .branch-list-header address{font-style:normal;margin:0 40px 0 10px}
+.branch-list>li .branch-list-header address .jsp_loc_list_branch_name{display:block;margin:0 0 8px;font-weight:bold}
+.branch-list>li .branch-list-header address .jsp_loc_list_branch_contact{display:block}
+.branch-list-footer{margin-left:10px}
+.branch-list>li .branch-list-header .jsp_loc_list_image{float:right;width:40px;text-align:center}
+.branch-list>li .branch-list-footer li{padding:0;margin-bottom:5px !important}
+.branch-list>li.selected,.branch-list>li.selected:hover{background:#ececec}
+.branch-list>li:hover{background:#f8f8f8}
+.branch-list>li.selected .branch-list-footer li a,.branch-list>li:hover .branch-list-footer li a{background:#f6f6f8}
+.branch-list-footer li a:hover,.branch-list-footer li a:active,.branch-list-footer li a:focus{cursor:pointer;background:#fff !important;}
+
+
+.dropdown
+{
+    display: none;
+    list-style: none;
+    background: #0083B5;
+    padding: 0px 10px;
+    border-radius: 0px 0px 5px 5px;
+    border-top: 3px solid #14B8DD;
+    overflow: hidden;
+    position: relative;
+    top: 6px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .33);
+    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, .33);
+    width: 152px;
+    margin: 0 0 0 auto;
+}
+
+.dropdown > li
+{
+    padding: 5px;
+    border-bottom: 1px solid #EBE2E2;
+    text-align: left;
+}
+
+.dropdown > li > a
+{
+    line-height: initial;
+    font-size: 12px;
+}
+
+.dropdown > li:last-child
+{
+    border-bottom: none;
+}
+
+.dropdown > li > a > i
+{
+    margin-right: 5px;
+    color: inherit;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.dropdown > li > a:hover
+{
+    color: #00ADD8;
+}
+
+.ifrForm
+{
+    display: block;
+    width: 100%;
+    border: 0;
+    overflow-y: scroll;
+}
+
+.labelsMarkerCluster
+{
+    color: #000;
+    font-family: "Lucida Grande" , "Arial" , sans-serif;
+    font-size: 10px;
+    font-weight: bold !important;
+    text-align: center;
+    white-space: nowrap;
+    margin-top: -31px !important;
+    text-shadow: rgba(255, 255, 255, 0.62) 1px 1px;
+}
+
+
+/** search box **/
+.omnibox-frame
+{
+    position: absolute;
+    bottom: 0;
+    left: 53px;
+    z-index: 2;
+    height: 0;
+    top: 85px;
+}
+#omnibox
+{
+    position: absolute;
+    left: 0px;
+    margin: 16px;
+    top: 0px;
+    z-index: 10;
+    -webkit-transition: left 0.5s;
+    transition: left 0.5s;
+}
+.searchbox
+{
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-right: 0;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    padding: 0 11px 0 13px;
+    width: 400px;
+    vertical-align: top;
+}
+.searchbox-shadow
+{
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3),0 4px 15px -5px rgba(0,0,0,0.0);
+}
+.searchbox-shadow, .searchbox-shadow
+{
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3),0 4px 15px -5px rgba(0,0,0,0.3);
+}
+.searchbox, .searchbox-shadow
+{
+    -webkit-transition: all 200ms cubic-bezier(0.52,0,0.48,1);
+    -moz-transition: all 200ms cubic-bezier(0.52,0,0.48,1);
+    -ms-transition: all 200ms cubic-bezier(0.52,0,0.48,1);
+    -o-transition: all 200ms cubic-bezier(0.52,0,0.48,1);
+    transition: all 200ms cubic-bezier(0.52,0,0.48,1);
+}
+.searchbox input
+{
+    background-color: transparent;
+    border: 0;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 300;
+    margin: 5px 0 0 0;
+    outline: 0;
+    padding: 0;
+    width: 100%;
+    box-shadow: none;
+    height: auto !important;
+}
+.searchboxinput
+{
+    line-height: 30px;
+    width: 100%;
+}
+.searchbutton
+{
+    background-color: #4d90fe;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+    border: 0;
+    border-radius: 0 2px 2px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    height: 32px;
+    left: 400px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    vertical-align: top;
+    width: 72px;
+    z-index: -1;
+}
+.searchbutton:hover
+{
+    background-color: #357ae8;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8);
+    cursor: default;
+}
+.searchbutton:focus
+{
+    border: 1px solid transparent;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3),inset 0 0 0 1px rgba(255,255,255,0.5);
+    outline: none;
+}
+.searchbutton:active
+{
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3),inset 2px 0 6px -1px rgba(0,0,0,0.3);
+}
+
+
+.searchbutton:before
+{
+    background: url(//maps.gstatic.com/tactile/omnibox/search-button.png);
+    content: "";
+    display: block;
+    height: 17px;
+    margin: 0 auto;
+    width: 17px;
+}
+
+
+.maxminbutton
+{
+    background-color: #4d90fe;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+    border: 0;
+    border-radius: 0 2px 2px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    height: 32px;
+    left: 400px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    vertical-align: top;
+    width: 72px;
+    z-index: -1;
+}
+.maxminbutton:hover
+{
+    background-color: #357ae8;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8);
+    cursor: default;
+}
+.maxminbutton:focus
+{
+    border: 1px solid transparent;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3),inset 0 0 0 1px rgba(255,255,255,0.5);
+    outline: none;
+}
+.maxminbutton:active
+{
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3),inset 2px 0 6px -1px rgba(0,0,0,0.3);
+}
+.maxminbutton::before
+{
+    background: url(//maps.gstatic.com/tactile/omnibox/search-button.png);
+    content: "";
+    display: block;
+    height: 17px;
+    margin: 0 auto;
+    width: 17px;
+}
+
+.sbox-focus
+{
+    border-color: #4d90fe !important;
+    margin-left: -1px;
+    padding-left: 14px;
+    width: 401px;
+}
+.searchbox input::-webkit-input-speech-button
+{
+    opacity: 0.5;
+}
+#omnibox .gsib_a
+{
+    border: 0;
+    box-shadow: none;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    -webkit-box-shadow: none;
+}
+
+/******      TimeLine      *******/
+#divTimeline
+{
+    margin: 5px 10px;
+}
+
+#divTimeline input
+{
+    width: 77px;
+}
+
+#divTimeline #btnPlay
+{
+    float: right;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 7px;
+}
+
+#divTimeline #datepicker
+{
+    float: left;
+}
+
+#divTimeline #divTitulo, #divTimeline #divLabel
+{
+    text-align: left;
+}
+
+#divTimeline #divTitulo label
+{
+    font-weight: bold;
+}
+
+.datepickerLat
+{
+    width: 275px !important;
+}
+
+.datepickerLatSeta
+{
+    opacity: 0 !important;
+}
+
+#divTimeline input[readonly]
+{
+    cursor: auto !important;
+    background-color: #fff !important;
+}
+
+#divTimeline input[disabled]
+{
+    cursor: not-allowed !important;
+    background-color: #eee !important;
+}
+
+#divUltimoAcesso {
+    position: absolute;
+    width: 180px;
+    z-index: 998;
+    margin-left: -90px;
+    bottom: 0;
+    left: 50%;
+    font-size: 10px;
+    text-align: center;
+    background-color: rgb(245, 245, 245);
+}
+
+.circleBase {
+	border-radius: 50%;
+	behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+	width: 8px;
+	height: 8px;
+	border: 1px solid black;
+}
+
+@media print
+{
+  .geocode-plugin
+  {
+    display: none;
+  }
+}
+.hide-plugin {
+    display: none !important;
+}
+
+/** search box **/
+.omnibox-frame
+{
+   position: absolute;
+   bottom: 0;
+   left: 382px;
+   z-index: 2;
+   height: 0;
+   padding-top: 36px
+   top: 30px;
+}
+
+.geocode-plugin #omnibox
+{
+    position: absolute;
+    left: 0px;
+    margin: 16px;
+    top: 0px;
+    z-index: 10;
+    -webkit-transition: left 0.5s;
+    transition: left 0.5s;
+}
+
+.geocode-plugin .searchbox
+{
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-right: 0;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    padding: 0 11px 0 13px;
+    width: 400px;   
+    vertical-align: top;
+}
+
+.geocode-plugin .searchbox-shadow
+{
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3),0 4px 15px -5px rgba(0,0,0,0.0);
+}
+
+.geocode-plugin .searchbox-shadow, .searchbox-shadow
+{
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3),0 4px 15px -5px rgba(0,0,0,0.3);
+}
+
+.geocode-plugin .searchbox, .searchbox-shadow
+{
+    -webkit-transition: all 200ms cubic-bezier(0.52,0,0.48,1);
+    -moz-transition: all 200ms cubic-bezier(0.52,0,0.48,1);
+    -ms-transition: all 200ms cubic-bezier(0.52,0,0.48,1);
+    -o-transition: all 200ms cubic-bezier(0.52,0,0.48,1);
+    transition: all 200ms cubic-bezier(0.52,0,0.48,1);
+}
+.geocode-plugin .searchbox input
+{
+    background-color: transparent;
+    border: 0;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 300;
+    margin: 5px 0 0 0;
+    outline: 0;
+    padding: 0;
+    width: 100%; 
+    box-shadow: none;
+    height: auto !important;
+}
+
+.geocode-plugin .searchboxinput
+{
+    line-height: 30px;
+    width: 100%;
+}
+
+.geocode-plugin .searchbutton
+{
+    background-color: #4d90fe;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+    border: 0;
+    border-radius: 0 2px 2px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    height: 32px;
+    left: 400px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    vertical-align: top;
+    width: 72px;
+    z-index: -1;
+}
+.geocode-plugin .searchbutton:hover
+{
+    background-color: #357ae8;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8);
+    cursor: default;
+}
+.geocode-plugin .searchbutton:focus
+{
+    border: 1px solid transparent;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3),inset 0 0 0 1px rgba(255,255,255,0.5);
+    outline: none;
+}
+.geocode-plugin .searchbutton:active
+{
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3),inset 2px 0 6px -1px rgba(0,0,0,0.3);
+}
+
+.geocode-plugin .searchbutton::before
+{
+    background: url(//maps.gstatic.com/tactile/omnibox/search-button.png);
+    content: "";
+    display: block;
+    height: 17px;
+    margin: 0 auto;
+    width: 17px;
+}
+
+.geocode-plugin .sbox-focus
+{
+    border-color: #4d90fe !important;
+    margin-left: -1px;
+    padding-left: 14px;
+    width: 401px;
+}
+
+.geocode-plugin .searchbox input::-webkit-input-speech-button
+{
+    opacity: 0.5;
+}
+
+.geocode-plugin #omnibox .gsib_a
+{
+    border: 0;
+    box-shadow: none;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    -webkit-box-shadow: none;
+}

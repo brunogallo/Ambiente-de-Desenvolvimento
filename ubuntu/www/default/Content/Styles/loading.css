@@ -1,0 +1,37 @@
+﻿#notify-widget-pane {
+    top: 70px;
+    pointer-events: none;
+    position: fixed;
+    width: 100%;
+    z-index: 1111;
+    text-align: center;
+}
+
+.loadingBox {
+    display: -moz-inline-box;
+    display: inline-block;
+}
+
+.oe .ls, .oe .ks {
+    border-top-color: #fff1a8;
+    border-bottom-color: #fff1a8;
+}
+
+.oe .gd {
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    font-size: 13px;
+    height: 39px;
+    min-width: 200px;
+    padding: 7px 15px 0 15px;
+    background: #fff1a8;
+    border-color: #fff1a8;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 19px;
+}
